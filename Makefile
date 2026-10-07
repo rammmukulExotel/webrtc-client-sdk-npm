@@ -1,0 +1,24 @@
+VERSION := $(shell npm pkg get version | tr -d '"')
+	
+build:dep
+	npm run build
+	cp -r ../webrtc-core-sdk/src/static/* dist/
+
+
+build-local:
+	npm uninstall @exotel-npm-dev/webrtc-core-sdk
+	npm install ../webrtc-core-sdk 
+	npm run build
+	cp -r ../webrtc-core-sdk/src/static/* dist/
+
+
+dep:
+	npm uninstall @exotel-npm-dev/webrtc-core-sdk
+	npm install @exotel-npm-dev/webrtc-core-sdk@latest
+
+publish: build
+	npm publish
+
+
+tar: build
+	tar -czvf exotelsdk-$(VERSION).tar.gz dist/

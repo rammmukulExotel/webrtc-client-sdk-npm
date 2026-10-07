@@ -1,0 +1,35 @@
+{
+  "name": "@exotel-npm-dev/webrtc-client-sdk",
+  "version": "3.0.16",
+  "description": "client sdk for webrtc based on webrtc core sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/Exotel/webrtc-sdk.git"
+  },
+  "keywords": [
+    "webrtc"
+  ],
+  "author": "exotel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/Exotel/webrtc/issues"
+  },
+  "homepage": "https://bitbucket.org/Exotel/webrtc#readme",
+  "devDependencies": {
+    "babel-loader": "^8.2.5",
+    "circular-dependency-plugin": "^5.2.2",
+    "file-loader": "^6.2.0",
+    "terser-webpack-plugin": "^5.6.1",
+    "uuid": "^9.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@exotel-npm-dev/webrtc-core-sdk": "^3.0.14"
+  }
+}
